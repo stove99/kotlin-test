@@ -27,4 +27,20 @@ fun main(args: Array<String>){
     var value = 3.141592;
     println("${value.format(2)}")
     println("${value.format2(3)}")
+
+    var list = listOf("a", "b", "c", "d");
+    println("join : ${list.joinToString()}")
+    println("join : ${list.joinToString("-")}")
+
+    var list2 = listOf(Test("stive"), Test("srove"))
+    println("join object : ${ list2.joinToString { "${it.name} : ${it.age}" } }")
+
+    var str = """
+        |fun test(){
+            |println("xxxx")
+        |}
+    """
+
+    println(str.trimIndent())
+    println(str.trimMargin())
 }
